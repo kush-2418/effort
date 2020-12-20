@@ -1,0 +1,43 @@
+<html>
+<title>
+    Flask Tutorial
+</title>
+<body>
+    <h1>This is my FLASK Tutorial</h1>
+    <form action="/getname" method="post" enctype="multipart/form-data">  
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname" value=""><br><br>
+        <button class="button button1">Submit</button>
+      </form> 
+
+{% if surname %}
+
+<h2>Your full name is {{ name }} {{ surname }} </h2>
+
+<h2>My friends are </h2>
+
+<table style="width:100%">
+    <tr>
+      <th>Friends</th>
+    </tr>
+    {% for i in range(0,length) %}
+    <tr>
+      <td>{{ friends[i] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endif %}
+
+
+
+<form action="/effort" method="post" enctype="multipart/form-data">  
+    <label for="lname">Bug</label><br>
+    <input type="text" id="lname" name="bug" value=""><br>
+    <label for="lname">RFC</label><br>
+    <input type="text" id="lname" name="rfc" value=""><br><br>
+    <button class="button button1">Submit</button>
+  </form> 
+
+
+</body>
+</html>
